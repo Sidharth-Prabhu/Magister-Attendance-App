@@ -7,9 +7,10 @@
 ---
 
 <p align="center">
-  <img src="https://scradlex.netlify.app/content/image/image1.jpeg" width="30%" />
-  <img src="https://scradlex.netlify.app/content/image/image3.jpeg" width="30%" />
-  <img src="https://scradlex.netlify.app/content/image/image2.jpeg" width="30%" />
+  <img src="https://github.com/Cyber-Zypher/Magister-Attendance-App/blob/master/images/IMG-20240115-WA0004.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Cyber-Zypher/Magister-Attendance-App/blob/master/images/IMG-20240115-WA0003.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Cyber-Zypher/Magister-Attendance-App/blob/master/images/IMG-20240115-WA0001.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Cyber-Zypher/Magister-Attendance-App/blob/master/images/IMG-20240115-WA0002.jpg?raw=true" width="30%" />
 </p>
 
 ## Features
