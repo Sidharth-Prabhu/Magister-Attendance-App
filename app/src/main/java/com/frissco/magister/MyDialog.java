@@ -3,6 +3,7 @@ package com.frissco.magister;
 import android.app.Dialog;
 import android.location.GnssAntennaInfo;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -122,7 +123,9 @@ public class MyDialog extends DialogFragment {
         EditText roll_edt = view.findViewById(R.id.class_edit);
         EditText name_edt = view.findViewById(R.id.subject_edit);
         roll_edt.setHint("Roll");
-        name_edt.setHint("name");
+        roll_edt.setInputType(InputType.TYPE_CLASS_NUMBER);
+        name_edt.setHint("Name");
+        name_edt.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
         Button cancel = view.findViewById(R.id.cancel_btn);
         Button add = view.findViewById(R.id.add_btn);
 

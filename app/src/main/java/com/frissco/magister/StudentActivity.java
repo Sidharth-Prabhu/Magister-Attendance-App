@@ -210,7 +210,7 @@ public class StudentActivity extends AppCompatActivity {
         adapter.notifyItemChanged(position);
     }
 
-    private void deleteStudent(int groupId) {
+    private void deleteStudent(int position) {
         dbHelper.deleteStudent(studentItems.get(position).getSid());
         studentItems.remove(position);
         adapter.notifyItemRemoved(position);
