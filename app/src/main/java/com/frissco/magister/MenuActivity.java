@@ -37,5 +37,6 @@ public class MenuActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.main_toolbar);
         ImageView menuBtn = findViewById(R.id.menu);
         menuBtn.setImageResource(R.drawable.ic_back);
+        menuBtn.setOnClickListener(v -> onBackPressed());
     }
 }
