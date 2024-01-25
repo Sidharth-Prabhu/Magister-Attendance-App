@@ -3,19 +3,33 @@ package com.frissco.magister;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.channels.FileChannel;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.PrimitiveIterator;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final int VERSION = 2;
+    private static final int DATABASE_VERSION = 2;
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
     }
@@ -96,6 +110,39 @@ public class DBHelper extends SQLiteOpenHelper {
             db.execSQL(DROP_STATUS_TABLE);
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void backupAndShareDatabase(Context context) throws IOException {
+        File currentDB = context.getDatabasePath(DATABASE_NAME);
+        String backupDate = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String backupFileName = "backup_" + backupDate + ".db";
+
+        if (currentDB.exists()) {
+            Intent sendIntent = new Intent(Intent.ACTION_SEND);
+            sendIntent.setType("application/octet-stream");
+            sendIntent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", currentDB));
+            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            context.startActivity(Intent.createChooser(sendIntent, "Share database backup"));
+        }
+    }
+
+    public void restoreDatabaseFromBackupFile(Context context, Uri backupFileUri) {
+        try {
+            File backupFile = new File(backupFileUri.getPath());
+            if (backupFile.exists()) {
+                File currentDB = context.getDatabasePath(DATABASE_NAME);
+                try (FileChannel src = new FileInputStream(backupFile).getChannel();
+                     FileChannel dst = new FileOutputStream(currentDB).getChannel()) {
+                    dst.transferFrom(src, 0, src.size());
+                }
+                Log.i("Restore", "Database restored successfully");
+            } else {
+                Log.e("Restore", "Backup file does not exist");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e("Restore", "Error restoring database: " + e.getMessage());
         }
     }
 

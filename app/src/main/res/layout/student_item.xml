@@ -8,9 +8,11 @@
     android:layout_marginLeft="6dp"
     android:layout_marginTop="6dp"
     app:cardUseCompatPadding="false"
+    app:cardBackgroundColor="@color/dertary"
+    android:background="@color/dertary"
     app:cardElevation="0dp"
     app:cardPreventCornerOverlap="false"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="25dp">
 
     <RelativeLayout
         android:paddingLeft="36dp"

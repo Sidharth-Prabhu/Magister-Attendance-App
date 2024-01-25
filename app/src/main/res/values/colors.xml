@@ -4,5 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="present">#95FF84</color>
     <color name="absent">#FF3434</color>
-    <color name="accent">#11f364</color>
+    <color name="accent">#092635</color>
+    <color name="secondary">#1B3A42</color>
+    <color name="tertiary">#5C8374</color>
+    <color name="portiary">#9EC8B9</color>
+    <color name="dertary">#F0FFFA</color>
 </resources>

@@ -2,16 +2,16 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="25dp"
     android:layout_marginTop="8dp"
     android:layout_marginRight="8dp"
-    android:background="@color/white"
+    android:background="@drawable/custom_card"
     android:layout_marginLeft="8dp"
     android:layout_height="96dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
+        android:background="@color/secondary"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -27,7 +27,7 @@
                 android:id="@+id/class_tv"
                 android:text="Class Name"
                 android:textSize="20sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
                 android:id="@+id/subject_tv"
                 android:text="Subject Name"
                 android:textSize="15sp"
-                android:textColor="#6A6A6A"/>
+                android:textColor="#A5A5A5"/>
         </LinearLayout>
 
     </RelativeLayout>

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jan 2022"
-        android:textColor="@color/black"
+        android:textColor="@color/dertary"
         android:textSize="20sp"
         android:textStyle="bold"/>
 </LinearLayout>

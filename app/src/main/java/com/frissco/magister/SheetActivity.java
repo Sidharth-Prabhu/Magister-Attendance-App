@@ -5,6 +5,7 @@ import androidx.core.content.FileProvider;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -54,6 +55,7 @@ public class SheetActivity extends AppCompatActivity {
         linear=findViewById(R.id.lineard);
         csv_maker=findViewById(R.id.createPdf);
         showTable();
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
     private void showTable() {
