@@ -1,6 +1,6 @@
 <div align="center">
     <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" style="display: block; margin: 0 auto"/>
-    <h1>Magister: E-Attendance</h1>
+    <h1>Magister: A digital attendance register</h1>
     <p>An Android application for maintaining attendance registers digitally.</p>
 </div>
 
