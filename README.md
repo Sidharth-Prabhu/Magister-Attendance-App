@@ -25,3 +25,6 @@
 [<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
 alt="Get it on GitHub"
 height="80">](https://github.com/Cyber-Zypher/Magister-Attendance-App)
+[<img src="https://lh3.googleusercontent.com/q1k2l5CwMV31JdDXcpN4Ey7O43PxnjAuZBTmcHEwQxVuv_2wCE2gAAQMWxwNUC2FYEOnYgFPOpw6kmHJWuEGeIBLTj9CuxcOEeU8UXyzWJq4NJM3lg=s0"
+alt="Get it on Google Play"
+height="80">](https://play.google.com/store/apps/details?id=com.frissco.magister)
